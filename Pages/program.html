@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Программа обучения</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="text-lg bg-[#eaeff7] flex flex-col min-h-screen">
+    <header class="w-full p-4 bg-white text-xl">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="index.html">
+                <img src="../Assets/Images/header/logo.png" alt="" class="w-16">
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="" class="flex flex-col after:w-0 after:h-[2px] after:rounded-full after:bg-[#4b79f6] after:transition-all after:duration-500 hover:after:w-full">Главная</a>
+                <a href="" class="flex flex-col after:w-0 after:h-[2px] after:rounded-full after:bg-[#4b79f6] after:transition-all after:duration-500 hover:after:w-full">Задания</a>
+                <a href="" class="flex flex-col after:w-0 after:h-[2px] after:rounded-full after:bg-[#4b79f6] after:transition-all after:duration-500 hover:after:w-full">Программа обучения</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full container mx-auto grow flex items-center justify-center my-10 flex-col gap-10">
+        <p class="text-3xl font-medium">Программа обучения</p>
+        <div class="w-full bg-white p-6 rounded-xl flex flex-col gap-10">
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">1. Введение в программирование</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Основные понятия и термины программирования</li>
+                            <li>Выбор языка программирования для старта</li>
+                            <li>Обзор популярных языков и их применение</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">2. Основы алгоритмов и структур данных</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Что такое алгоритм и зачем он нужен</li>
+                            <li>Основные структуры данных: массивы, списки, стеки, очереди</li>
+                            <li>Примеры реализации алгоритмов на практике</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">3. Работа с Git и системами контроля версий</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Основы работы с Git</li>
+                            <li>Создание и управление репозиториями</li>
+                            <li>Решение конфликтов и ветвление</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">4. Основы объектно-ориентированного программирования (ООП)</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Основные принципы ООП: инкапсуляция, наследование, полиморфизм</li>
+                            <li>Примеры использования ООП в реальных проектах</li>
+                            <li>Практика написания классов и объектов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">5. Работа с базами данных</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Основы реляционных баз данных</li>
+                            <li>Язык SQL: запросы, фильтрация, сортировка</li>
+                            <li>Работа с СУБД: MySQL, PostgreSQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">6. Веб-разработка: основы</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Основы HTML и CSS</li>
+                            <li>JavaScript: синтаксис и основные функции</li>
+                            <li>Создание простого веб-приложения</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">7. Тестирование и отладка кода</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Методы тестирования: unit-тесты, интеграционные тесты</li>
+                            <li>Инструменты для отладки кода</li>
+                            <li>Практика написания тестов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">8. Работа с API</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Что такое API и зачем оно нужно</li>
+                            <li>Работа с REST API</li>
+                            <li>Примеры использования API в проектах</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">9. Основы безопасности в разработке</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Основные угрозы безопасности</li>
+                            <li>Методы защиты данных</li>
+                            <li>Практика безопасного программирования</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown flex flex-col gap-6">
+                <button class="flex items-center justify-between dropdownToggler cursor-pointer">
+                    <span class="text-xl font-medium">10. Подготовка к трудоустройству</span>
+                    <img src="../Assets/Images/main/arrow.svg" alt="" class="w-8 transition-all duration-500">
+                </button>
+                <div class="dropdownList hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-black/15 h-px"></div>
+                        <ul class="list-inside list-disc marker:text-[#4b79f6]">
+                            <li>Создание резюме и портфолио</li>
+                            <li>Подготовка к техническим собеседованиям</li>
+                            <li>Советы по поиску первой работы в IT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full bg-white flex flex-col items-center gap-2 text-center p-4 mt-auto">
+        <p class="text-xl text-[#4B79F6] font-medium">Education</p>
+        <p class="text-base text-gray-500">© 2025 Education. Все права защищены.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../Assets/JS/main.js"></script>
+</body>
+</html>
