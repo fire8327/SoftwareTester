@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="text-lg bg-[#eaeff7] flex flex-col min-h-screen font-mono">
+    <header class="w-full p-4 bg-white text-xl">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="../index.html">
+                <img src="../Assets/Images/header/logo.png" alt="" class="w-16">
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="../index.html" class="flex flex-col after:w-0 after:h-[2px] after:rounded-full after:bg-[#4b79f6] after:transition-all after:duration-500 hover:after:w-full">Главная</a>
+                <a href="tasks.html" class="flex flex-col after:w-0 after:h-[2px] after:rounded-full after:bg-[#4b79f6] after:transition-all after:duration-500 hover:after:w-full">Задания</a>
+                <a href="program.html" class="flex flex-col after:w-0 after:h-[2px] after:rounded-full after:bg-[#4b79f6] after:transition-all after:duration-500 hover:after:w-full">Программа обучения</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full container mx-auto grow flex items-center justify-center my-10 flex-col gap-10">
+        <a href="tasks.html" class="w-fit self-start py-1.5 px-4 rounded-xl bg-[#4B79F6] text-white">Вернуться назад</a>
+        <p class="text-3xl text-[#4B79F6] font-medium text-center">Задание 2</p>
+        <div class="container2">
+        
+            <svg id="B" width='36' height='45' viewBox="0 0 24 30" fill="#00FFFF" xmlns="http://www.w3.org/2000/svg">
+                <path id="pathB" d="M 0 0 L 0 30 L 20 30 L 24 26 L 24 18 L 20 14 L 5 14 L 5 5 L 24 5 L 24 0 L 0 0 Z M 
+                      18 25 L 18 19 L 5 19 L 5 25 L 18 25 Z" stroke=black stroke-width="1" />
+                <circle id="circle" r="1" fill="yellow">
+                    <animateMotion dur="2" repeatCount="indefinite"
+                        path="M 0 0 L 0 30 L 20 30 L 24 26 L 24 18 L 20 14 L 5 14 L 5 5 L 24 5 L 24 0 L 0 0 Z" />
+                </circle>
+            </svg>
+        
+        
+            <svg id="I" width='36' height='45' viewbox="0 0 24 30" fill="#00FFFF" xmlns="http://www.w3.org/2000/svg">
+                <path id="pathI" d="M 0 0 L 0 30 L 5 30 L 19 10 L 19 30 L 24 30 L 24 0 L 19 0 L 5 20 L 5 0 L 0 0 Z" stroke=black
+                    stroke-width="1" />
+                <circle id="circle" r="1" fill="yellow">
+                    <animateMotion dur="2" repeatCount="indefinite"
+                        path="M 0 0 L 0 30 L 5 30 L 19 10 L 19 30 L 24 30 L 24 0 L 19 0 L 5 20 L 5 0 L 0 0 Z" />
+                </circle>
+            </svg>
+        
+        
+            <div id="lastP">
+                <text id="fName">Безопасность</text>
+                <text id="sName">Информационная</text>
+                <img id="image" src="../Assets/Images/tasks/солнышко.png" alt="солнышко" />
+            </div>
+        
+        </div>
+    </main>
+
+    <footer class="w-full bg-white flex flex-col items-center gap-2 text-center p-4 mt-auto">
+        <p class="text-xl text-[#4B79F6] font-medium">Education</p>
+        <p class="text-base text-gray-500">© 2025 Education. Все права защищены.</p>
+    </footer>
+
+    <style>
+        content {
+            margin: 0;
+            width: 1000px;
+            height: 1200px;
+            display: flex;
+        }
+    
+        .container2 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border: black solid 1px;
+            background: #00FFFF;
+        }
+    
+        .container1 {
+            bottom: 0;
+            right: 0;
+        }
+    
+        svg {
+            position: absolute;
+            overflow: visible;
+        }
+    
+        #B {
+            top: 5px;
+            left: 5px;
+        }
+    
+        #I {
+            bottom: 5px;
+            right: 5px;
+        }
+    
+        #pathB {
+            opacity: 1;
+        }
+    
+        #pathI {
+            opacity: 1;
+        }
+    
+        .container2:hover #B {
+            animation: hover_B 0.7s linear forwards;
+        }
+    
+        .container2:hover #I {
+            animation: hover_I 0.7s linear forwards;
+        }
+    
+        @keyframes hover_B {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+    
+            35% {
+                transform: translate(120px, 0) scale(1.1);
+                ;
+            }
+    
+            50% {
+                transform: translate(130px, 50px) scale(1.2);
+            }
+    
+            65% {
+                transform: translate(120px, 70px) scale(1.3);
+            }
+    
+            100% {
+                transform: translate(50px, 70px) scale(1.4);
+            }
+        }
+    
+        @keyframes hover_I {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+    
+            35% {
+                transform: translate(-120px, 0) scale(1.1);
+            }
+    
+            50% {
+                transform: translate(-130px, -50px) scale(1.2);
+            }
+    
+            65% {
+                transform: translate(-120px, -70px) scale(1.3);
+            }
+    
+            100% {
+                transform: translate(-50px, -70px) scale(1.4);
+            }
+        }
+    
+        @keyframes clicked_B {
+            0% {
+                transform: rotate(0) translate(72px, 102px) scale(1.4);
+                opacity: 1;
+            }
+    
+            60% {
+                transform: rotate(0) translate(72px, 102px) scale(1.4);
+                opacity: 1;
+            }
+    
+            80% {
+                transform: rotate(180deg) translate(72px, 102px) scale(1.4);
+                opacity: 1;
+            }
+    
+            99% {
+                transform: rotate(360deg) translate(72px, 102px) scale(1.4);
+                opacity: 1;
+            }
+    
+            100% {
+                transform: rotate(360deg) translate(72px, 102px) scale(1.4);
+                opacity: 0;
+            }
+        }
+    
+        @keyframes clicked_I {
+            0% {
+                transform: rotate(0) translate(-69px, -97px) scale(1.4);
+                opacity: 1;
+            }
+    
+            60% {
+                transform: rotate(0) translate(-69px, -97px) scale(1.4);
+                opacity: 1;
+            }
+    
+            80% {
+                transform: rotate(180deg) translate(-69px, -97px) scale(1.4);
+                opacity: 1;
+            }
+    
+            99% {
+                transform: rotate(360deg) translate(-69px, -97px) scale(1.4);
+                opacity: 1;
+            }
+    
+            100% {
+                transform: rotate(360deg) translate(-69px, -97px) scale(1.4);
+                opacity: 0;
+            }
+        }
+    
+        #circle {
+            opacity: 0;
+        }
+    
+        .container2:active #circle {
+            animation: circle 2.5s linear forwards;
+        }
+    
+        @keyframes circle {
+            0% {
+                opacity: 1;
+            }
+    
+            60% {
+                opacity: 1;
+            }
+    
+            61% {
+                opacity: 0;
+            }
+    
+            100% {
+                opacity: 0;
+            }
+        }
+    
+        .container2:active #B {
+            transform-origin: 72px 102px;
+            animation: clicked_B 2.5s linear forwards;
+        }
+    
+        .container2:active #I {
+            transform-origin: -30px -45px;
+            animation: clicked_I 2.5s linear forwards;
+        }
+    
+        #image {
+            position: absolute;
+            width: 125px;
+            height: auto;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            left: 50%;
+        }
+    
+        #fName {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-weight: bold;
+            color: white;
+        }
+    
+        #sName {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-weight: bold;
+            color: white;
+        }
+    
+        #lastP {
+            opacity: 0;
+        }
+    
+        .container2:active #lastP {
+            animation: last 3.5s linear forwards;
+        }
+    
+        @keyframes last {
+            0% {
+                opacity: 0;
+            }
+    
+            75% {
+                opacity: 0;
+            }
+    
+            76% {
+                opacity: 1;
+            }
+    
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        .container2:active {
+            animation: size 4s linear forwards;
+        }
+    
+        @keyframes size {
+            0% {
+                width: 200px;
+                height: 200px
+            }
+    
+            80% {
+                width: 200px;
+                height: 200px
+            }
+    
+            100% {
+                width: 240px;
+                height: 240px;
+            }
+        }
+    </style>
+</body>
+</html>

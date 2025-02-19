@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 4</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="text-lg bg-[#eaeff7] flex flex-col min-h-screen font-mono">
+    <header class="w-full p-4 bg-white text-xl">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="../index.html">
+                <img src="../Assets/Images/header/logo.png" alt="" class="w-16">
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="../index.html" class="flex flex-col after:w-0 after:h-[2px] after:rounded-full after:bg-[#4b79f6] after:transition-all after:duration-500 hover:after:w-full">Главная</a>
+                <a href="tasks.html" class="flex flex-col after:w-0 after:h-[2px] after:rounded-full after:bg-[#4b79f6] after:transition-all after:duration-500 hover:after:w-full">Задания</a>
+                <a href="program.html" class="flex flex-col after:w-0 after:h-[2px] after:rounded-full after:bg-[#4b79f6] after:transition-all after:duration-500 hover:after:w-full">Программа обучения</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full container mx-auto grow flex items-center justify-center my-10 flex-col gap-10">
+        <a href="tasks.html" class="w-fit self-start py-1.5 px-4 rounded-xl bg-[#4B79F6] text-white">Вернуться назад</a>
+        <p class="text-3xl text-[#4B79F6] font-medium text-center">Задание 4</p>      
+        <div id="main">
+            <div id="block3"></div>
+            <div id="block12">
+                <div id="block2"></div>
+                <div id="block1">
+                    <div id="input">
+                        <input type="text" name="" id="words_input">
+                        <button id="add_words_button">Разобрать</button>
+                    </div>
+                    <div id="output"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full bg-white flex flex-col items-center gap-2 text-center p-4 mt-auto">
+        <p class="text-xl text-[#4B79F6] font-medium">Education</p>
+        <p class="text-base text-gray-500">© 2025 Education. Все права защищены.</p>
+    </footer>
+
+    <style>
+        #main {
+            width: 60vw;
+            display: flex;
+            flex-direction: column;
+            background-color: #f0f8ff;
+            /* Светло-голубой фон */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1vw;
+        }
+    
+        #block3 {
+            margin: 0.5vw;
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            overflow-x: auto;
+            background-color: #e0e0e0;
+            /* Светло-серый фон */
+            border-radius: 5px;
+            padding: 0.5vw;
+            border: 2px solid #007bff;
+            /* Синяя рамка */
+            gap: 5px;
+        }
+    
+        #block12 {
+            display: flex;
+            flex-direction: row;
+        }
+    
+        #block2 {
+            margin: 0.5vw;
+            width: 30%;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+            background-color: #f0f0f0;
+            /* Светло-серый фон */
+            border-radius: 5px;
+            padding: 0.5vw;
+            border: 2px solid #007bff;
+            /* Синяя рамка */
+        }
+    
+        #block1 {
+            margin: 0.5vw;
+            width: 70%;
+            height: 60vh;
+            background-color: #d0d0d0;
+            /* Серый фон */
+            border-radius: 5px;
+            padding: 0.5vw;
+            border: 2px solid #007bff;
+            /* Синяя рамка */
+        }
+    
+        .word {
+            margin-top: 10px;
+            min-width: 8vw;
+            max-width: 8vw;
+            min-height: 3vh;
+            height: 3vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            user-select: none;
+            border-radius: 40px;
+            border: 2px solid #007bff;
+            /* Синяя рамка */
+            background-color: #e0f7fa;
+            /* Светло-голубой фон */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            color: #333;
+            /* Тёмно-серый текст */
+        }
+    
+        .word:hover {
+            background-color: #007bff;
+            /* Ярко-синий фон при наведении */
+            color: white;
+            /* Белый текст при наведении */
+            transform: scale(1.1);
+            /* Увеличение при наведении */
+        }
+    
+        .word:active {
+            background-color: #0056b3;
+            /* Темно-синий фон при нажатии */
+            color: white;
+        }
+    
+        #input {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+    
+        #words_input {
+            all: unset;
+            width: 60%;
+            height: 60%;
+            background-color: #f0f0f0;
+            /* Светло-серый фон */
+            border-radius: 5px;
+            padding: 0.5vw;
+            border: 2px solid #007bff;
+            /* Синяя рамка */
+            transition: background-color 0.3s ease;
+            color: #333;
+            /* Тёмно-серый текст */
+        }
+    
+        #words_input:focus {
+            background-color: #e0e0e0;
+            /* Серый фон при фокусе */
+            border-color: #0056b3;
+            /* Темно-синяя рамка при фокусе */
+        }
+    
+        #add_words_button {
+            all: unset;
+            width: 20%;
+            height: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #007bff;
+            /* Ярко-синий фон */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            color: white;
+            /* Белый текст */
+        }
+    
+        #add_words_button:hover {
+            background-color: #0056b3;
+            /* Темно-синий фон при наведении */
+            transform: scale(1.1);
+            /* Увеличение при наведении */
+        }
+    
+        #add_words_button:active {
+            background-color: #003d80;
+            /* Очень тёмно-синий фон при нажатии */
+        }
+    
+        #output {
+            margin: 2% 4%;
+            width: 92%;
+            height: 80%;
+            position: relative;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            /* Светло-серый фон */
+            border-radius: 5px;
+            padding: 0.5vw;
+            border: 2px solid #007bff;
+            /* Синяя рамка */
+        }
+    </style>
+
+    <script>
+
+        const WORD_CLASS = 'word'
+        const DEFAULT_COLOR = '#8c8c8c'
+        const add_words_button = document.querySelector('#add_words_button')
+        const words_input = document.querySelector('#words_input')
+        const words_output = document.querySelector('#output')
+        const block3 = document.querySelector('#block3')
+        const block2 = document.querySelector('#block2')
+
+
+        const words = new Map();
+
+        let a_counter = 0;
+        let b_counter = 0;
+        let n_counter = 0;
+
+        let offsetX = 0
+        let offsetY = 0
+
+
+        add_words_button.onclick = () => {
+
+            ClearWords()
+
+            let words_array = words_input.value
+                .split('-')
+                .map(word => word.trim())
+                .sort((a, b) => {
+                    const numA = parseFloat(a);
+                    const numB = parseFloat(b);
+                    const isNumA = !isNaN(numA);
+                    const isNumB = !isNaN(numB);
+
+                    if (isNumA && isNumB) {
+                        return numA - numB;
+                    } else {
+                        return a.localeCompare(b);
+                    }
+                })
+
+            words_array.forEach(word => {
+                words.set(GetNextKeyForWord(word), { word: word, color: GetRandomColor() });
+            })
+
+            DrawWordsOnPanel()
+        }
+
+        function GetNextKeyForWord(word) {
+
+            let first_symbol = word[0]
+
+            if (/\p{Lu}/u.test(first_symbol)) {
+                a_counter++;
+                return 'a' + a_counter;
+            }
+            else if (/\p{Ll}/u.test(first_symbol)) {
+                b_counter++;
+                return 'b' + b_counter;
+            }
+            else if (/[0-9]+/.test(first_symbol)) {
+                n_counter++;
+                return 'n' + n_counter
+            }
+        }
+
+        function DrawWordsOnPanel() {
+
+            for (let i = 1; i <= a_counter; i++) {
+                let key = 'a' + i;
+                let word = words.get(key).word;
+                let wordLink = CreateNewWord(key, word)
+                words.set(key, { ...words.get(key), link: wordLink, used: false })
+            }
+
+            for (let i = 1; i <= b_counter; i++) {
+                let key = 'b' + i;
+                let word = words.get(key).word;
+                let wordLink = CreateNewWord(key, word)
+                words.set(key, { ...words.get(key), link: wordLink, used: false })
+            }
+
+            for (let i = 1; i <= n_counter; i++) {
+                let key = 'n' + i;
+                let word = words.get(key).word;
+                let wordLink = CreateNewWord(key, word)
+                words.set(key, { ...words.get(key), link: wordLink, used: false })
+            }
+        }
+
+        function ReDrawWordsOnPanel() {
+
+            block3.innerHTML = '';
+
+            for (let i = 1; i <= a_counter; i++) {
+                let key = 'a' + i;
+
+                if (words.get(key).used)
+                    continue;
+
+                let wordLink = words.get(key).link
+                block2.append(wordLink)
+            }
+
+            for (let i = 1; i <= b_counter; i++) {
+                let key = 'b' + i;
+
+                if (words.get(key).used)
+                    continue;
+
+                let wordLink = words.get(key).link
+                block2.append(wordLink)
+            }
+
+            for (let i = 1; i <= n_counter; i++) {
+                let key = 'n' + i;
+
+                if (words.get(key).used)
+                    continue;
+
+                let wordLink = words.get(key).link
+                block2.append(wordLink)
+            }
+        }
+
+        function CreateNewWord(key, word) {
+            const word_block = document.createElement('div');
+            word_block.id = key;
+            word_block.className = WORD_CLASS;
+            word_block.draggable = true;
+            word_block.textContent = `${key} ${word}`;
+
+            block2.appendChild(word_block);
+            //block3.appendChild(word_block);
+
+            word_block.ondragstart = function (event) {
+                event.dataTransfer.setData('id', key)
+                event.dataTransfer.setData('offsetX', key)
+                event.dataTransfer.setData('offsetY', key)
+
+                const wordRect = event.target.getBoundingClientRect();
+                offsetX = event.clientX - wordRect.left;
+                offsetY = event.clientY - wordRect.top;
+            }
+
+            word_block.onclick = (function (key) {
+                return function () {
+
+                    const word = words.get(key);
+                    if (word.used) {
+
+                        const newWord = document.createElement('span')
+                        newWord.textContent = word.word + ' ';
+                        newWord.style.color = word.color;
+
+                        block3.appendChild(newWord)
+                    }
+                };
+            })(key);
+
+            return word_block;
+        }
+
+        function ClearWords() {
+            words.clear();
+            block3.innerHTML = '';
+            block2.innerHTML = '';
+            words_output.innerHTML = '';
+            a_counter = 0;
+            b_counter = 0;
+            n_counter = 0;
+        }
+
+
+        /*fsaffasfas */
+        words_output.ondragover = (event) => {
+            event.preventDefault();
+        }
+
+        words_output.ondrop = (event) => {
+
+            const wordId = event.dataTransfer.getData('id')
+
+            words.set(wordId, { ...words.get(wordId), used: true });
+
+            const word = document.querySelector('#' + wordId)
+
+            const containerRect = words_output.getBoundingClientRect();
+
+            // 10 - margin-left
+            const x = event.clientX - containerRect.left - offsetX - 10;
+            const y = event.clientY - containerRect.top - offsetY;
+
+            word.style.position = 'absolute';
+            word.style.left = `${x}px`;
+            word.style.top = `${y}px`;
+
+            word.style.backgroundColor = words.get(wordId).color;
+
+            words_output.appendChild(word);
+        }
+
+
+        block2.ondragover = (event) => {
+
+            event.preventDefault();
+        }
+
+        block2.ondrop = (event) => {
+
+            let wordId = event.dataTransfer.getData('id')
+            words.set(wordId, { ...words.get(wordId), used: false });
+
+            const word = document.querySelector('#' + wordId)
+            word.style.position = 'static'
+            word.style.backgroundColor = DEFAULT_COLOR
+
+            ReDrawWordsOnPanel()
+        }
+        /*fsafsdfsdsd */
+
+
+        function GetRandomColor() {
+            let minBrightness = 100
+            let maxBrightness = 200
+
+            let r, g, b, brightness;
+
+            do {
+                r = Math.floor(Math.random() * 256);
+                g = Math.floor(Math.random() * 256);
+                b = Math.floor(Math.random() * 256);
+
+                brightness = 0.2 * r + 0.7 * g + 0.1 * b;
+            } while (brightness < minBrightness || brightness > maxBrightness);
+
+            // Преобразуем значения в шестнадцатеричный формат
+            return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+        }
+
+    </script>
+
+</body>
+</html>
