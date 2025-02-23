@@ -5,3 +5,9 @@ $(".dropdown").each((i, el) => {
         $(el).find(".dropdownList").toggle(500)
     })
 })
+
+/* menu */
+$("#toggler, #overlay").click(() => {
+    $("#menu").toggleClass("max-md:top-0 max-md:top-full max-md:-translate-y-full")
+    $("#overlay").toggleClass("hidden")
+})
